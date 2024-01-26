@@ -6,7 +6,7 @@ new App({
 		// What's your name?
 		name: 'Máté Simon',
 		// In the following fiels you can either give a single string, 
-		// or an array of bullet points
+		// or an array of bullet points.
 		
 		// What do you associate with the term 'CI/CD'?
 		associations: [
