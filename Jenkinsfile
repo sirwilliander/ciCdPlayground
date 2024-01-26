@@ -19,6 +19,10 @@ pipeline {
             steps {
                 sh 'yarn test'
             }
+            post {
+                success{//success helyett always is lehet
+                junit '**/reports/**/*.xml'
+            }
         }
 
         stage('Integration test') {
@@ -27,7 +31,7 @@ pipeline {
             }
 
             post {
-                success{
+                success{//success helyett always is lehet
                 junit '**/reports/**/*.xml'
             }
          }
