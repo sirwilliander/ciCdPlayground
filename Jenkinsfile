@@ -9,7 +9,7 @@ pipeline {
 
          stage('install and checkout') {
             steps {
-                git 'https://github.com/sirwilliander/ciCdPlayground.git'
+                git branch: 'main', url: 'https://github.com/sirwilliander/ciCdPlayground.git'
                 sh 'yarn'
                 sh 'yarn build'
             }
@@ -25,11 +25,12 @@ pipeline {
             steps {
                 sh 'yarn test:e2e'
             }
-        }
-        post {
-            success{
+
+            post {
+                success{
                 junit '**/reports/**/*.xml'
             }
+         }
         }
     }
 }
