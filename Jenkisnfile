@@ -9,7 +9,7 @@ pipeline {
 
          stage('install and checkout') {
             steps {
-                git 'https://github.com/sirwilliander/ciCdPlayground'
+                git 'https://github.com/sirwilliander/ciCdPlayground.git'
                 sh 'yarn'
                 sh 'yarn build'
             }
